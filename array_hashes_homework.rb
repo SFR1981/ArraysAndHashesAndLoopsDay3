@@ -30,9 +30,27 @@ stops.delete_at(2)
 p stops
 
 #7. How many stops there are in the array?
+
+p stops.length()
+
 #8. How many ways can we return `"Falkirk High"` from the array?
+
+#return stops[2]
+p stops[2]
+p stops.at(2)
+
+
+
+
 #9. Reverse the positions of the stops in the array
+p stops.reverse
+
 #10. Print out all the stops using a for loop
+for stop in stops
+  p stop
+end
+
+
 
 # Exercise B
 
@@ -97,12 +115,36 @@ users = {
 # Complete these tasks:
 
 #1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+p users["Jonathan"][:twitter]
+
 #2. Get Erik's hometown
+
+p users["Erik"][:home_town]
 #3. Get the array of Erik's lottery numbers
-#4. Get the type of Avril's pet Monty
+
+p users["Erik"][:lottery_numbers]
+#4. Get the type of Avril's pet
+
+p users["Avril"][:pets][0][:species]
+
 #5. Get the smallest of Erik's lottery numbers
+
+p users["Erik"][:lottery_numbers].min()
 #6. Return an array of Avril's lottery numbers that are even
+even_numbers = []
+for number in users["Avril"][:lottery_numbers]
+  if number % 2 == 0
+    even_numbers << number
+  end
+end
+p even_numbers
+
+
+
 #7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
+
+users["Erik"][:lottery_numbers] << 7
+p users["Erik"][:lottery_numbers]
 #8. Change Erik's hometown to Edinburgh
 #9. Add a pet dog to Erik called "Fluffy"
 #10. Add another person to the users hash
