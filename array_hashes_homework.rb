@@ -146,10 +146,38 @@ p even_numbers
 users["Erik"][:lottery_numbers] << 7
 p users["Erik"][:lottery_numbers]
 #8. Change Erik's hometown to Edinburgh
+
+users["Erik"][:hometown] = "Edinburgh"
+
+p users["Erik"][:hometown]
 #9. Add a pet dog to Erik called "Fluffy"
+
+users["Erik"][:pets] << { name: "Fluffy",
+species: "dog"}
+
+p users["Erik"][:pets]
 #10. Add another person to the users hash
 
+users["Steve"] = {
+  :twitter => "bowlonastick",
+  :lottery_numbers => [4, 2, 9, 23, 1, 0],
+  :home_town => "Edinburgh",
+  :pets => [
+  {
+    :name => "Ian",
+    :species => "cat"
+  },
+  {
+    :name => "Ronald",
+    :species => "rat"
 
+
+  }
+]
+}
+
+
+p users
 # Exercise C
 
 # Given the following data structure:
